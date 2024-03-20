@@ -73,7 +73,7 @@ Linux Windows Android 的界面属于外壳(Shell) ，而不是内核(kernel)。
 
 Disk : 存放OS和Bootloader
 
-BOIS : 基于I/O处理系统
+BOIS : 基础I/O处理系统
 
 Bootloader : 加载OS，将OS放入内存
 
@@ -88,7 +88,8 @@ Disk
 **开机流程**
 
 1.  BIOS
-    *   开机后，寻找显卡和执行BIOS (此时, `CS : IP = 0xF000 : 0xFFF0`,  CS/IP 两个寄存器) 
+    *   开机后，寻找显卡和执行BIOS (此时, `CS : IP = 0xF000 : 0xFFF0`,  CS/IP 两个寄存器)
+    *   BIOS检测外设是否正常
     *   将Bootloader从磁盘的引导扇区加载到0x7C00 (Bootloader一共占用512M字节的内存)
     *   跳转到 `CS : IP = 0x0000 : 0x7C00`
 
