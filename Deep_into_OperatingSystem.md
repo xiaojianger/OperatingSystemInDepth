@@ -136,7 +136,7 @@ Disk
 
 -   Win32 API 用于Windows
 -   POSIX API 用于 POSIX-based systems（包括UNIX，LINUX，Mac OS X）
--   Java API 用于JAVA虚拟机
+-   Java API 用于JAVA虚拟机，JVM同样需要在运行os上调用win32或者posix
 
 **特点**
 
